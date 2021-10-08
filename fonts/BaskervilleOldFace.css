@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BaskervilleOldFace';
+    src: url('fonts/BaskervilleOldFace.eot');
+    src: url('fonts/BaskervilleOldFace.eot') format('embedded-opentype'),
+         url('fonts/BaskervilleOldFace.woff2') format('woff2'),
+         url('fonts/BaskervilleOldFace.woff') format('woff'),
+         url('fonts/BaskervilleOldFace.ttf') format('truetype'),
+         url('fonts/BaskervilleOldFace.svg#BaskervilleOldFace') format('svg');
+}

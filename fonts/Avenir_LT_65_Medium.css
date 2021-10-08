@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Avenir_LT_65_Medium';
+    src: url('fonts/Avenir_LT_65_Medium.eot');
+    src: url('fonts/Avenir_LT_65_Medium.eot') format('embedded-opentype'),
+         url('fonts/Avenir_LT_65_Medium.woff2') format('woff2'),
+         url('fonts/Avenir_LT_65_Medium.woff') format('woff'),
+         url('fonts/Avenir_LT_65_Medium.ttf') format('truetype'),
+         url('fonts/Avenir_LT_65_Medium.svg#Avenir_LT_65_Medium') format('svg');
+}

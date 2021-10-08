@@ -1,0 +1,530 @@
+<?php
+/*
+Template Name: Home Page
+ */
+
+get_header();?>
+<section class="row no-gutters">
+   <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+      <!-- <img alt="" src="<?php the_field('banner_left_image');?>" class="w-100 h-100" /> <-->
+      <video muted autoplay="true" height="100%" src="<?php the_field('banner_left_video');?>"></video>
+      <?php //echo do_shortcode(get_field('banner_left_video')); ?>
+   </div>
+   <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+      <div class="toprightbanner blacktowhite">
+         <img alt="" src="<?php the_field('banner_top_right');?>" class="w-100"/>
+         <img alt="" src="<?php the_field('banner_logo');?>" class="toprightposition wow flip"/>
+      </div>
+      <div class="row no-gutters">
+         <div class="col-12 col-sm-6 col-md-6 col-lg-6 backdarkestblue aftertopimage">
+            <h2 class="fs-24 aven-book white-color aftersecheading wow slideInUp"><?php the_field('section_1_heading');?></h2>
+            <p class="fs-22 basker white-color afterseccont wow slideInUp"><?php the_field('section_1_content');?></p>
+            <p class="thisboxarrow fs16 aven-book arrrrotopsec formobilearrowpad wow slideInUp"><a href="#">EXPLORE SPACES<span class="circle"><i class="arrow right"></i></span></a></p>
+         </div>
+         <div class="col-12 col-sm-6 col-md-6 col-lg-6 padl0 hovereffect-section1">
+            <img alt="" src="<?php the_field('banner_bottom_right');?>" class="w-100"/>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="hideclientsmobile">
+<h2 class="text-center pt-40 pb-30 aven-book darkestgrey headingsixemob wow flipInX">AMENITIES</h2>
+   <div class="container-fluid prpl-0">
+      <div class="row">
+         <div class="col-lg-4 col-md-4 col-12 col-sm-4 paddleftandright0 blacktowhite citiesrel">
+            <?php
+if (have_rows('section_2_images')):
+	while (have_rows('section_2_images')): the_row();?>
+						        <img class="w-100" src="<?php the_sub_field('section_2_image_1');?>" alt="" />
+						        <p class="citiespos thatboxarrow fons21p aven-book"><?php the_sub_field('section_2_image_1_text');?></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+		<div class="long-image-content">
+			<div class="long-image-content-text">
+				<h2 class="fs-24 aven-book">For Your Fun</h2>
+				<ul class="marforsecondul">
+					<li class="fs-22 basker">Cricket Net</li>
+					<li class="fs-22 basker">Mini Football</li>
+					<li class="fs-22 basker">Barbecue Area</li>
+					<li class="fs-22 basker">Outdoor Recreational Facilities</li>
+				</ul>
+			</div>
+		</div>
+         </div>
+         <div class="col-lg-4 col-md-4 col-12 col-sm-4 paddleftandright0 citiesrel hovereffect-section2">
+            <?php
+if (have_rows('section_2_images')):
+	while (have_rows('section_2_images')): the_row();?>
+						        <img class="w-100" src="<?php the_sub_field('section_2_image_2');?>" alt="" />
+						        <p class="citiespos thatboxarrow fons21p aven-book"><?php the_sub_field('section_2_image_2_text');?></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+		<div class="long-image-content">
+			<div class="long-image-content-text">
+				<h2 class="fs-24 aven-book">For your Leisure</h2>
+				<ul class="">
+					<li class="fs-22 basker">Organic Farming</li>
+					<li class="fs-22 basker">Jogging Track</li>
+					<li class="fs-22 basker">Recreational Garden</li>
+					<li class="fs-22 basker">Meditation Area</li>
+				</ul>
+			</div>
+		</div>
+         </div>
+         <div class="col-lg-4 col-md-4 col-12 col-sm-4 paddleftandright0 blacktowhite citiesrel nothoversection">
+            <?php
+if (have_rows('section_2_images')):
+	while (have_rows('section_2_images')): the_row();?>
+						        <img class="w-100" src="<?php the_sub_field('section_2_image_3');?>" alt="" />
+						        <p class="citiespos thatboxarrow nonehover fons21p aven-book"><?php the_sub_field('section_2_image_3_text');?></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+		<div class="long-image-content">
+			<div class="long-image-content-text">
+				<h2 class="fs-24 aven-book">For Your Convenience</h2>
+				<ul class="marforsecondul">
+					<li class="fs-22 basker">ATM</li>
+					<li class="fs-22 basker">Cafe</li>
+					<li class="fs-22 basker">Food Court</li>
+					<li class="fs-22 basker">Stationary Shop</li>
+				</ul>
+			</div>
+		</div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="row no-gutters slider hideclientsdesktop">
+   <h2 class="text-center pt-40 pb-40 aven-book darkestgrey headingsixemob">AMENITIES</h2>
+   <div class="swiper-container" id="section2-mob">
+      <div class="swiper-wrapper">
+         <div class="col-lg-4 col-md-4 col-12 col-sm-4 paddleftandright0 blacktowhite citiesrel swiper-slide">
+            <?php
+if (have_rows('section_2_images')):
+	while (have_rows('section_2_images')): the_row();?>
+						        <img class="w-100" src="<?php the_sub_field('section_2_image_1');?>" alt="" />
+						        <p class="citiespos thatboxarrow fons21p aven-book"><?php the_sub_field('section_2_image_1_text');?></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+		<div class="long-image-content">
+			<div class="long-image-content-text">
+				<h2 class="fs-24 aven-book">For Your Fun</h2>
+				<ul class="marforsecondul">
+					<li class="fs-22 basker">Cricket Net</li>
+					<li class="fs-22 basker">Mini Football</li>
+					<li class="fs-22 basker">Barbecue Area</li>
+					<li class="fs-22 basker">Outdoor Recreational Facilities</li>
+				</ul>
+			</div>
+		</div>
+         </div>
+         <div class="col-lg-4 col-md-4 col-12 col-sm-4 paddleftandright0 citiesrel swiper-slide">
+            <?php
+if (have_rows('section_2_images')):
+	while (have_rows('section_2_images')): the_row();?>
+						        <img class="w-100" src="<?php the_sub_field('section_2_image_2');?>" alt="" />
+						        <p class="citiespos thatboxarrow fons21p aven-book"><?php the_sub_field('section_2_image_2_text');?></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+		<div class="long-image-content">
+			<div class="long-image-content-text">
+				<h2 class="fs-24 aven-book">For your Leisure</h2>
+				<ul class="">
+					<li class="fs-22 basker">Organic Farming</li>
+					<li class="fs-22 basker">Jogging Track</li>
+					<li class="fs-22 basker">Recreational Garden</li>
+					<li class="fs-22 basker">Meditation Area</li>
+				</ul>
+			</div>
+		</div>
+         </div>
+         <div class="col-lg-4 col-md-4 col-12 col-sm-4 paddleftandright0 blacktowhite citiesrel nothoversection swiper-slide">
+            <?php
+if (have_rows('section_2_images')):
+	while (have_rows('section_2_images')): the_row();?>
+						        <img class="w-100" src="<?php the_sub_field('section_2_image_3');?>" alt="" />
+						        <p class="citiespos thatboxarrow nonehover fons21p aven-book"><?php the_sub_field('section_2_image_3_text');?></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+		<div class="long-image-content">
+			<div class="long-image-content-text">
+				<h2 class="fs-24 aven-book">For Your Convenience</h2>
+				<ul class="marforsecondul">
+					<li class="fs-22 basker">ATM</li>
+					<li class="fs-22 basker">Cafe</li>
+					<li class="fs-22 basker">Food Court</li>
+					<li class="fs-22 basker">Stationary Shop</li>
+				</ul>
+			</div>
+		</div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="row no-gutters">
+   <div class="container-fluid prpl-0">
+      <div class="row">
+         <div class="col-lg-4 col-md-6 col-12 col-sm-12 paddleftandright0 hvrbox citiesrel hovernone">
+            <?php
+if (have_rows('section_3_images')):
+	while (have_rows('section_3_images')): the_row();?>
+						        <img class="w-100" src="<?php the_sub_field('section_3_image_1');?>" alt="" />
+						        <p class="citiespos thatboxarrow fons21p aven-book wow fadeInLeft">
+						           <?php the_sub_field('section_3_city1');?><!--<span class="circle"><i class="arrow right"></i></span>-->
+						        </p>
+						        <div class="hvrbox-layer_top hvrbox-layer_slidedown">
+						           <div class="hvrbox-text">
+						              <h2 class="aven-book fs-32px">Mumbai</h2>
+						              <p class="basker fons16 lh15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</p>
+						              <p class="thisboxarrow paddintop30 aven-book fons16"><a href="#">VIEW MORE<span class="circle"><i class="arrow right"></i></span></a></p>
+						           </div>
+						        </div>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="col-lg-4 col-md-6 col-12 col-sm-12 paddleftandright0 hvrbox citiesrel">
+            <?php
+if (have_rows('section_3_images')):
+	while (have_rows('section_3_images')): the_row();?>
+						        <img class="w-100" src="<?php the_sub_field('section_3_image_2');?>" alt="" />
+						        <p class="citiespos thatboxarrow fons21p aven-book wow fadeInLeft">
+						           <?php the_sub_field('section_3_city2');?><!--<span class="circle"><i class="arrow right"></i></span>-->
+						        </p>
+						        <div class="hvrbox-layer_top hvrbox-layer_slidedown">
+						           <div class="hvrbox-text">
+						              <h2 class="aven-book fs-32px">Hyderabad</h2>
+						              <p class="basker fons16 lh15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</p>
+						              <p class="thisboxarrow paddintop30 aven-book fons16"><a href="#">VIEW MORE<span class="circle"><i class="arrow right"></i></span></a></p>
+						           </div>
+						        </div>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="col-lg-4 col-md-6 col-12 col-sm-12 paddleftandright0 hvrbox citiesrel">
+            <?php
+if (have_rows('section_3_images')):
+	while (have_rows('section_3_images')): the_row();?>
+						        <img class="w-100" src="<?php the_sub_field('section_3_image_3');?>" alt="" />
+						        <p class="citiespos thatboxarrow fons21p aven-book wow fadeInLeft">
+						           <?php the_sub_field('section_3_city3');?><!--<span class="circle"><i class="arrow right"></i></span>-->
+						        </p>
+						        <div class="hvrbox-layer_top hvrbox-layer_slidedown">
+						           <div class="hvrbox-text">
+						              <h2 class="aven-book fs-32px">Pune</h2>
+						              <p class="basker fons16 lh15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</p>
+						              <p class="thisboxarrow paddintop30 aven-book fons16"><a href="#">VIEW MORE<span class="circle"><i class="arrow right"></i></span></a></p>
+						           </div>
+						        </div>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-4 col-md-6 col-12 col-sm-12 paddleftandright0 hvrbox citiesrel">
+            <?php
+if (have_rows('section_3_images')):
+	while (have_rows('section_3_images')): the_row();?>
+						        <img class="w-100" src="<?php the_sub_field('section_3_image_4');?>" alt="" />
+						        <p class="citiespos thatboxarrow fons21p aven-book wow fadeInLeft">
+						           <?php the_sub_field('section_3_city4');?><!--<span class="circle"><i class="arrow right"></i></span>-->
+						        </p>
+						        <div class="hvrbox-layer_top hvrbox-layer_slidedown">
+						           <div class="hvrbox-text">
+						              <h2 class="aven-book fs-32px">Chennai</h2>
+						              <p class="basker fons16 lh15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</p>
+						              <p class="thisboxarrow paddintop30 aven-book fons16"><a href="#">VIEW MORE<span class="circle"><i class="arrow right"></i></span></a></p>
+						           </div>
+						        </div>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="col-lg-4 col-md-6 col-12 col-sm-12 paddleftandright0 hvrbox citiesrel useforhover">
+            <?php
+if (have_rows('section_3_images')):
+	while (have_rows('section_3_images')): the_row();?>
+						        <img class="w-100" src="<?php the_sub_field('section_3_image_5');?>" alt="" />
+						        <p class="citiespos forhover thatboxarrow fons21p aven-book wow fadeInLeft">
+						           <?php the_sub_field('section_3_city5');?><!--<span class="circle"><i class="arrow right"></i></span>-->
+						        </p>
+						        <div class="hvrbox-layer_top hvrbox-layer_slidedown">
+						           <div class="hvrbox-text">
+						              <h2 class="aven-book fs-32px">Gandhinagar</h2>
+						              <p class="basker fons16 lh15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</p>
+						              <p class="thisboxarrow paddintop30 aven-book fons16"><a href="#">VIEW MORE<span class="circle"><i class="arrow right"></i></span></a></p>
+						           </div>
+						        </div>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="col-lg-4 col-md-6 col-12 col-sm-12 paddleftandright0 backdarkestblue bottomcityrel">
+            <h2 class="fs-24 aven-book white-color posabscitysec1 wow slideInUp">Revolutionizing<br>
+               conventional <br>
+               working environments
+            </h2>
+            <p class="fs-22 basker white-color posabscitysec2 wow slideInUp">with world class infrastructure,<br>
+               lifestyle amenities and leisure<br>
+               facilities across cities
+            </p>
+            <p class="thisboxarrow fs16 aven-book posabscitysec3 wow slideInUp"><a href="#">EXPLORE SPACES<span class="circle"><i class="arrow right"></i></span></a></p>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="row no-gutters hideclientsmobile" id="clients-desktop">
+   <div class="container pb-60">
+      <h2 class="text-center pt-40 pb-30 aven-book darkestgrey headingsixemob wow flipInX">OUR CLIENTELE</h2>
+      <div class="row">
+         <div class="col-12 col-md-4 paddingallclient clientbor1 blacktowhite">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center wow slideInLeft"><img src="<?php the_sub_field('clint_logo_1');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="col-12 col-md-4 paddingallclient clientbor2 blacktowhite">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center wow slideInDown"><img src="<?php the_sub_field('client_logo_2');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="col-12 col-md-4 padclient3 clientbor3 blacktowhite">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center wow slideInRight"><img src="<?php the_sub_field('client_logo_3');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-12 col-md-4 paddingallclient blacktowhite">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center wow slideInLeft"><img src="<?php the_sub_field('client_logo_4');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="col-12 col-md-4 padclient5 clientbor5 blacktowhite">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center wow slideInUp"><img src="<?php the_sub_field('client_logo_5');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="col-12 col-md-4 paddingallclient blacktowhite">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center wow slideInRight"><img src="<?php the_sub_field('client_logo_6');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+      </div>
+	  <div class="row">
+         <div class="col-12 col-md-4 paddingallclient clientbor7 blacktowhite">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center wow slideInLeft"><img src="<?php the_sub_field('clint_logo_1');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="col-12 col-md-4 paddingallclient clientbor8 blacktowhite">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center wow slideInDown"><img src="<?php the_sub_field('client_logo_2');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="col-12 col-md-4 padclient3 clientbor9 blacktowhite">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center wow slideInRight"><img src="<?php the_sub_field('client_logo_3');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="row no-gutters slider hideclientsdesktop">
+   <h2 class="text-center pt-40 pb-50 aven-book headingsixemob">OUR CLIENTELE</h2>
+   <div class="swiper-container" id="client-logo-mob">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center"><img src="<?php the_sub_field('clint_logo_1');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="swiper-slide">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center"><img src="<?php the_sub_field('client_logo_2');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="swiper-slide">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center"><img src="<?php the_sub_field('client_logo_3');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="swiper-slide">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center"><img src="<?php the_sub_field('client_logo_4');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="swiper-slide">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center"><img src="<?php the_sub_field('client_logo_5');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+         <div class="swiper-slide">
+            <?php
+if (have_rows('client_slider')):
+	while (have_rows('client_slider')): the_row();?>
+						        <p class="text-center"><img src="<?php the_sub_field('client_logo_6');?>" alt="" /></p>
+						        <?php endwhile;
+else:
+endif;
+?>
+         </div>
+      </div>
+   </div>
+</section>
+<section id="clients-mobile" class="row no-gutters">
+   <div class="tab-content w-100 backrel lastsec-bg" id="pills-tabContent">
+      <?php if (have_rows('last_section_backg')):
+	$varI = 1;
+	while (have_rows('last_section_backg')): the_row();?>
+						  <div class="tab-pane fade<?php if ($varI == 1) {?> show active<?php }?>" id="pills-<?php echo $varI; ?>" role="tabpanel" aria-labelledby="pills-<?php echo $varI; ?>-tab" style="background-image:url('<?php the_sub_field('background');?>'); background-size:cover; background-repeat: no-repeat;">
+						     <div class="nocirclerecmobile" style="background-image: url('<?php the_sub_field('hover-icon-last')?>'); position: absolute; height: 100%; width: 145px; left: 50%; transform: translateX(-50%); top: 0;">
+						     </div>
+						     <div class="row no-gutters">
+						        <div class="col-12 col-md-6 col-sm-6" style="padding:100px 0px; text-align:center !important">
+						           <div class="lastleftpos" id="counter">
+						              <p class="count aven-book" data-start="<?php the_sub_field('datastart')?>" data-end="<?php the_sub_field('dataend')?>"></p>
+						           </div>
+						           <div class="lastrighttextpos">
+						              <p class="aven-book margb0"><?php the_sub_field('text-top-left')?></p>
+						           </div>
+						           <div class="lastrighttext2pos">
+						              <p class="basker"><?php the_sub_field('text-bottom-left')?></p>
+						           </div>
+						        </div>
+						        <div class="col-12 col-md-6 col-sm-6" style="padding:100px 0px; text-align:center !important">
+						           <div class="lastrightpos" id="counter">
+						              <p class="count aven-book" data-start="<?php the_sub_field('datastart-right')?>" data-end="<?php the_sub_field('dataend-right')?>"></p>
+						           </div>
+						           <div class="lastrighttextpos">
+						              <p class="aven-book margb0"><?php the_sub_field('text-top-right')?></p>
+						           </div>
+						           <div class="lastrighttext2pos">
+						              <p class="basker"><?php the_sub_field('text-bottom-right')?></p>
+						           </div>
+						        </div>
+						     </div>
+						  </div>
+						  <?php $varI++;endwhile;
+endif;
+?>
+   </div>
+   <!-- <div class="container-fluid nav paddingg0" style="display:block !important">
+      <div class="row no-gutters" id="tabs-head">
+          <div class="col-sm-4 col-md-4 nav-item borwhiteright">
+              <p class="text-center margb0 fons21p tabsection pt-20 pb-20 aven-medium"><a class="nav-link textdnone" id="pills-1-tab" data-toggle="tab" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">TOTAL DEVELOPMENT</a></p>
+          </div>
+          <div class="col-sm-4 col-md-4 nav-item">
+              <p class="text-center margb0 fons21p tabsection pt-20 pb-20 aven-medium"><a class="nav-link textdnone" id="pills-2-tab" data-toggle="tab" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">EMPLOYMENT</a></p>
+          </div>
+          <div class="col-sm-4 col-md-4 nav-item borwhiteleft">
+              <p class="text-center margb0 fons21p tabsection pt-20 pb-20 aven-medium"><a class="nav-link textdnone" id="pills-3-tab" data-toggle="tab" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">GREEN FOOTPRINT</a></p>
+          </div>
+      </div>
+      </div> -->
+   <div class="container-fluid nav paddingg0" style="display:block !important">
+      <ul class="nav nav-tabs mytab" id="myTab" role="tablist">
+         <li class="nav-item">
+            <a class="nav-link active pt-20 pb-20 pt-xs-10 pb-xs-10 aven-medium" id="pills-1-tab" data-toggle="tab" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">TOTAL DEVELOPMENT</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link pt-20 pb-20 pt-xs-10 pb-xs-10 aven-medium" id="pills-2-tab" data-toggle="tab" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">EMPLOYMENT</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link pt-20 pb-20 pt-xs-10 pb-xs-10 aven-medium" id="pills-3-tab" data-toggle="tab" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">GREEN FOOTPRINT</a>
+         </li>
+      </ul>
+   </div>
+</section>
+</div>
+</div>
+</div>
+<?php get_footer();
